@@ -11,6 +11,7 @@
 */
 
 #include "tetris.h"
+#include "display.h"
 
 /*
     Parte principal do programa, responsável por iniciar e 
@@ -26,8 +27,12 @@ int main(){
     //inicializando matriz
     init(matrix);
 
-    while(1){
-        system("cls");
+    //apagar o cursor da tela
+    ShowConsoleCursor(0);
+    system("cls");
+
+    while(1){        
+        gotoxy(0,0);
 
         matrix[posI][posJ] = '@';
 
