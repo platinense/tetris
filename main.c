@@ -22,7 +22,7 @@ int main(){
     int posI, posJ;
 
     //posicao inicial do personagem
-    posI = ROWS/2;
+    posI = 0;
     posJ = COLUMNS/2;
     //inicializando matriz
     init(matrix);
@@ -31,16 +31,21 @@ int main(){
     ShowConsoleCursor(0);
     system("cls");
 
+    //animação do jogo
     while(1){        
         gotoxy(0,0);
 
+        //posicionar o @ no meio da tela
         matrix[posI][posJ] = '@';
 
+        //mostro a matriz na tela
         printMatrix(matrix);
 
+        //faça posição anterior do @ ser apagada
         matrix[posI][posJ] = ' ';
         
-        if(posJ < COLUMNS) posJ++;
+        //faço a posição da @ ir para a direita
+        if(posI < (ROWS-1)) posI++;
     }
 
     system("pause");
