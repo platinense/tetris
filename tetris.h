@@ -13,6 +13,13 @@
 //Configuração das dimensões da matriz principal do jogo
 #define COLUMNS 60
 #define ROWS 25
+//configuracao de teclar
+#define ESC 27
+#define ARROWS 224
+#define LEFT 75
+#define RIGHT 77
+#define TECLA_A 97
+#define TECLA_D 100
 
 /*
     Inicializa a matriz principal com 'espaços vazios'
